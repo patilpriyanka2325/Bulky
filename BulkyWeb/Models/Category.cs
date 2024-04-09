@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.CompilerServices;
 
 namespace BulkyWeb.Models
 {
@@ -8,8 +10,10 @@ namespace BulkyWeb.Models
         public int Id { get; set; }
 
         [Required]
+        [DisplayName("Category Name")]
         public string Name { get; set; }
 
+        [DisplayName("Category Order")]
         public int DisplayOrder { get; set; }
     }
 }

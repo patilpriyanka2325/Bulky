@@ -11,9 +11,11 @@ namespace BulkyWeb.Models
 
         [Required]
         [DisplayName("Category Name")]
+        [MaxLength(30)]
         public string Name { get; set; }
 
         [DisplayName("Category Order")]
+        [Range(1, 100)]
         public int DisplayOrder { get; set; }
     }
 }
